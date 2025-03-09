@@ -1,0 +1,173 @@
+/* Retro color palette */
+:root {
+    --bg-color: #1a1a1a;
+    --neon-green: #00ff9d;
+    --retro-red: #ff0055;
+    --retro-yellow: #ffd700;
+    --pixel-border: 3px solid var(--neon-green);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--neon-green);
+    font-family: 'VT323', monospace;
+    gap: 0.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.retro-header {
+    text-align: center;
+    text-shadow: 0 0 10px var(--neon-green);
+    border-bottom: var(--pixel-border);
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.retro-header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.retro-header p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.timer-display {
+    font-size: 8rem;
+    text-align: center;
+    margin: 0.5rem auto 0.5rem auto;
+}
+.progress-bar {
+    width: 80%;
+    margin: 1rem auto;
+    border: var(--pixel-border);
+    height: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--neon-green);
+    transition: width 1s linear;
+}
+
+.retro-btn {
+    font-size: 0.8rem;
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
+    border: var(--pixel-border);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.retro-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 15px currentColor;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.retro-input {
+    width: 90%;
+    font-size: 1.2rem;
+    font-family: 'VT323', monospace;
+    padding: 0.5rem 1rem;
+    border: var(--pixel-border);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--neon-green);
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 255, 157, 0.2);
+    max-width: 800px;
+}
+
+.retro-input::placeholder {
+    color: rgba(0, 255, 157, 0.7);
+    font-style: italic;
+}
+
+.retro-input:focus {
+    outline: none;
+    box-shadow: 0 0 15px var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+.retro-input:hover {
+    border-color: #00ff9d;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.session-counter {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.time-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.time-set {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-set label {
+    font-size: 1.4rem;
+}
+
+.retro-input.small {
+    width: 60px;
+    padding: 0.25rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ... existing responsive styles ... */
+
+.instruction-note {
+    font-size: 0.8rem;
+    color: var(--neon-green);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 0 0 5px var(--neon-green);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0.7; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.7; }
+} 
